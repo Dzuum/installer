@@ -1,0 +1,95 @@
+﻿<Application x:Class="Installer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             StartupUri="Shell.xaml">
+
+    <Application.Resources>
+        
+        
+        <!--BRUSHES-->
+        
+        
+        <SolidColorBrush x:Key="LightGrayBrush">#ECECEF</SolidColorBrush>
+        <SolidColorBrush x:Key="DarkGrayBrush">#65707B</SolidColorBrush>
+
+        <LinearGradientBrush x:Key="BigGradientBrush">
+            <GradientStop Color="Yellow" Offset="0.0" />
+            <GradientStop Color="Orange" Offset="0.5" />
+            <GradientStop Color="Red" Offset="1.0" />
+        </LinearGradientBrush>
+
+        <LinearGradientBrush x:Key="SmallGradientBrush" StartPoint="0,0.5" EndPoint="1,0.5">
+            <GradientStop Color="Yellow" Offset="0.0" />
+            <GradientStop Color="Orange" Offset="0.33" />
+            <GradientStop Color="White" Offset="0.9" />
+        </LinearGradientBrush>
+
+
+        <!--TEXT STYLES-->
+        
+        
+        <Style x:Key="NormalText"
+               TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Segoe UI" />
+            <Setter Property="FontSize" Value="12" />
+            <Setter Property="Foreground" Value="#2E2E2E" />
+        </Style>
+        
+        <Style x:Key="BiggerText"
+               TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Arial" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="Foreground" Value="#222222" />
+        </Style>
+        
+        
+        <!--BUTTON STYLES-->
+        
+        
+        <Style x:Key="ButtonBase"
+               TargetType="Button">
+            <Setter Property="DockPanel.Dock" Value="Right" />
+            <Setter Property="Width" Value="80" />
+            <Setter Property="Height" Value="auto" />
+        </Style>
+        
+        <Style x:Key="CancelButton"
+               TargetType="Button"
+               BasedOn="{StaticResource ButtonBase}">
+            <Setter Property="Content" Value="Cancel" />
+            <Setter Property="Margin" Value="13" />
+        </Style>
+
+        <Style x:Key="NextButton"
+               TargetType="Button"
+               BasedOn="{StaticResource ButtonBase}">
+            <Setter Property="Margin" Value="0 13 13 13" />
+        </Style>
+
+        <Style x:Key="BackButton"
+               TargetType="Button"
+               BasedOn="{StaticResource ButtonBase}">
+            <Setter Property="Content" Value="Back" />
+            <Setter Property="Margin" Value="0 13 4 13" />
+        </Style>
+        
+        
+        <!--OTHER-->
+        
+        
+        <Style x:Key="VerticalSeparator" TargetType="{x:Type Separator}">
+            <Setter Property="LayoutTransform">
+                <Setter.Value>
+                    <TransformGroup>
+                        <TransformGroup.Children>
+                            <TransformCollection>
+                                <RotateTransform Angle="90" />
+                            </TransformCollection>
+                        </TransformGroup.Children>
+                    </TransformGroup>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

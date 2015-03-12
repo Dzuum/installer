@@ -1,0 +1,62 @@
+﻿<UserControl x:Class="Installer.Views.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignWidth="600"
+             d:DesignHeight="400">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="50" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        
+        <DockPanel LastChildFill="True">
+            <Separator DockPanel.Dock="Right"
+                       Style="{StaticResource VerticalSeparator}"
+                       Background="{StaticResource DarkGrayBrush}"
+                       Margin="0" />
+
+            <Rectangle Fill="{StaticResource BigGradientBrush}" />
+        </DockPanel>
+
+        
+        <DockPanel LastChildFill="False"
+                   Grid.Row="1"
+                   Grid.ColumnSpan="2"
+                   Background="{StaticResource LightGrayBrush}">
+            <Separator DockPanel.Dock="Top"
+                       Background="{StaticResource DarkGrayBrush}"
+                       Margin="0" />
+
+            <Button Style="{StaticResource CancelButton}"
+                    Click="CancelClick" />
+            <Button Style="{StaticResource NextButton}"
+                    Content="Next"
+                    Click="NextClick" />
+        </DockPanel>
+
+        
+        <StackPanel Grid.Column="1">
+            <TextBlock Style="{StaticResource BiggerText}"
+                       Margin="20">
+                Welcome to Generic Installer 9k1
+            </TextBlock>
+
+            <TextBlock Style="{StaticResource NormalText}"
+                       TextWrapping="WrapWithOverflow"
+                       Margin="24 0 20 20">
+                This WIZARD will guide you in the installation of Generic.
+                Basically it will copy the accompanying folder to the specified location, so like yeaah.
+            </TextBlock>
+        </StackPanel>
+    </Grid>
+</UserControl>

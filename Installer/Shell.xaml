@@ -1,0 +1,13 @@
+﻿<Window x:Class="Installer.Shell"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Generic Installer 9k1"
+        Icon="Icon.ico"
+        Width="600"
+        Height="400"
+        WindowStartupLocation="CenterScreen"
+        ResizeMode="CanMinimize"
+        Closing="WindowClosing">
+
+    <ContentControl x:Name="view" />
+</Window>
